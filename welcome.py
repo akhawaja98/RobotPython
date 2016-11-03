@@ -1,0 +1,6 @@
+member1 = ('Ahmed,')
+member2 = ('Gurprit,')
+member3 = ('Sean,')
+member4 = ('Eddie')
+member5 = ('And Luke')
+print("Hello, in this group we have", member1,member2,member3,member4,member5)
