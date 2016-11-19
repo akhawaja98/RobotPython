@@ -1,0 +1,21 @@
+from tkinter import * # Imports all functions from TKinter module
+import math # Imports all function from Math module
+
+# Code taken from "Foundation" file in our group GitHub repository
+regionFrame = Tk()
+regionFrame.geometry("1280x720") # Sets screen resolution/size
+regionFrame.title("US Tour Guide") # Sets title for program window
+
+# My Code
+regionFrame = Canvas(regionFrame, height = 720, width = 1280, bg="white") # Creates canvas, white bg, size of resolution.
+regionFrame.pack() # Executes
+    
+start = regionFrame.create_line(10, 10, 10, 710, fill="green", width=10) # Start Line - Green = Go
+finish = regionFrame.create_line(1270, 10, 1270, 710, fill="red", width=10) # Finish Line - Red = Stop
+
+### Distance from Start to Finish Function
+
+def distance(line1, line2):
+
+    
+regionFrame.mainloop() # Loops the creation of the window/frame
