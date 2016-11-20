@@ -15,7 +15,7 @@ finish = regionFrame.create_line(1270, 10, 1270, 710, fill="red", width=10) # Fi
 
 ### Distance from Start to Finish Function
 
-def distance(x1,y1,x2,y2): # Function than takes line coordinates and calculates distance using math module function 'Sqrt' (Square Root)
+def distance(x1,y1,x2,y2): # Function that takes line coordinates and calculates distance using math module function 'Sqrt' (Square Root)
     x1 = 10
     y1 = 710
     x2 = 1270
