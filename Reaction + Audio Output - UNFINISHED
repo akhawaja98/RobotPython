@@ -1,0 +1,14 @@
+from tkinter import *
+
+regionFrame = Tk()
+regionFrame.geometry("1280x720")
+regionFrame.title("US Tour Guide")
+
+regionFrame = Canvas(regionFrame, height = 720, width = 1280, bg="white")
+regionFrame.pack()
+
+regionFrame.create_rectangle(640, 640, 600, 600)
+
+regionFrame.create_rectangle()
+
+regionFrame.mainloop()
