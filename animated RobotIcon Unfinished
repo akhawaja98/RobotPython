@@ -1,0 +1,33 @@
+import time
+from tkinter import *
+
+def Platform(x, y):
+    w.create_rectangle(x, y, 1400, 680, width =0, fill="#55290D")
+def Icon():
+    Ball = w.create_oval(10,10,60,60, fill="#000000")
+    XSpeed = 1
+    YSpeed = 2
+    
+    while True:
+        w.move(Ball, XSpeed, YSpeed)
+        Pos = w.coords(Ball)
+        if Pos[3] >=720 or Pos[1] <=0:
+            YSpeed = -YSpeed
+        if Pos[2] >=1280 or Pos[0] <=0:
+            XSpeed = -XSpeed
+        root.update()
+        time.sleep(0.01)
+
+root = Tk()
+root.geometry("1280x720")
+
+w = Canvas(root, width=1280, height=720)
+w.pack()
+
+
+Platform(0, 800)
+Icon()
+root.mainloop()
+
+
+
