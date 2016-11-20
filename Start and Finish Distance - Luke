@@ -15,7 +15,15 @@ finish = regionFrame.create_line(1270, 10, 1270, 710, fill="red", width=10) # Fi
 
 ### Distance from Start to Finish Function
 
-def distance(line1, line2):
+def distance(x1,y1,x2,y2):
+    x1 = 10
+    y1 = 710
+    x2 = 1270
+    y2 = 710
+    distanceFrom = math.sqrt((x2 - x1)**2 + (y2 - y1)**2)
+    print(str(distanceFrom))
 
-    
+distance(10,710,1270,710)
+
+
 regionFrame.mainloop() # Loops the creation of the window/frame
