@@ -1,0 +1,11 @@
+# Section extracted from final program for commenting and explaining purposes. All code beneath is my own.
+
+def distance(): # Function for detecting difference created
+    start = w.create_rectangle(1260, 675, 1279, 719, fill="green") # Green rectangle to signify starting position
+    finish = w.create_rectangle(0, 675, 19, 719, fill="red") # Red rectangle to signigy finishing position
+    f1, f2, f3, f4 = w.coords(finish) # Assigns four values in coordinates in finish tuple to these new variables
+    s1, s2, s3, s4 = w.coords(start) # Assigns four values in coordinates in start tuple to these new variables
+    distanceFrom = math.sqrt((s1 - f1)**2 + (s2 - f2)**2) # The maths for calculating the distance between the rectangles
+    print(str(distanceFrom)) # Prints result to user
+
+distance() # Executes distance function
