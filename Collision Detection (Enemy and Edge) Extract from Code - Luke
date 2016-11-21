@@ -1,4 +1,4 @@
-# Section cut from final program for commenting and explaining purposes. All code beneath is my own.
+# Section extracted from final program for commenting and explaining purposes. All code beneath is my own.
 
 x_min = 3 # Minimum the robot can go on the X axis
 y_min = 3 # Minimum the robot can go on the Y axis
