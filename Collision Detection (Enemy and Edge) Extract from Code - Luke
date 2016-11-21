@@ -1,0 +1,42 @@
+# Section cut from final program for commenting and explaining purposes. All code beneath is my own.
+
+x_min = 3 # Minimum the robot can go on the X axis
+y_min = 3 # Minimum the robot can go on the Y axis
+x_max = 1260 # Maximum the robot can go on the X axis
+y_max = 715 # Maximum the robot can go on the Y axis
+
+def neverEndingFunctions(): # Function created especially for functions we want to keep going continously
+    def collisionDetection(): # Code specified to reacting when objects collide
+        cx = 0 # Placeholder variable for how many pixels we want the robot or enemy to move on the X axis
+        cy = 0 # Placeholder variable for how many pixels we want the robot or enemy to move on the Y axis
+        ball = w.create_oval(10,10,60,60, fill="#FF0000") # Creates enemy ball
+        XSpeed = 1 # Speed it will travel on the X axis (pixels per second)
+        YSpeed = 2 # Speed it will travel on the Y axis (pixels per second)
+    
+        while True: # Never-ending loop
+            w.move(ball, XSpeed, YSpeed) # Makes the enemy ball move
+            Pos = w.coords(ball) # Allows coordinate tuple of ball to be assigned to a new variable
+            if Pos[3] >=720 or Pos[1] <=0: # Y Axis
+                YSpeed = -YSpeed
+            if Pos[2] >=1280 or Pos[0] <=0: # X Axis
+                XSpeed = -XSpeed
+        
+            rx1, ry1, rx2, ry2 = w.coords(Robot) # Assigns four numercial robot coordinates to these four variables
+            if rx1 >= x_max: # To see if going too far right
+                cx = -10 # Changes to go back 10 pixels
+            if ry1 <= y_min: # To see if going too high up
+                cy = 10 # Changes to go down 10 pixels
+            if ry2 >= y_max: # To see if going down too low
+                cy= -10 # Changes to go up 10 pixels
+            if rx1 <= x_min: # To see if going too far left
+                cx = 10 # Changes to go forward 10 pixels
+            w.coords(Robot, rx1+cx, ry1+cy, rx2+cx, ry2+cy) # Sets new coordinates to the newly calculated ones
+            cx = 0 # Variable reset
+            cy = 0 # Variable reset
+        
+            w.update() # Updates screen/canvas for user to see
+            time.sleep(0.01) # Waits before being available again
+            
+    collisionDetection() # Executes the collission function
+
+neverEndingFunctions() # Executes never-ending functions
