@@ -1,3 +1,4 @@
+import math
 import time
 from tkinter import *
 
@@ -81,6 +82,14 @@ y_min = 3
 x_max = 1260
 y_max = 715
 
+def distance():
+    start = w.create_rectangle(1260, 675, 1279, 719, fill="green")
+    finish = w.create_rectangle(0, 675, 19, 719, fill="red")
+    f1, f2, f3, f4 = w.coords(finish)
+    s1, s2, s3, s4 = w.coords(start)
+    distanceFrom = math.sqrt((s1 - f1)**2 + (s2 - f2)**2)
+    print(str(distanceFrom))
+
 def neverEndingFunctions():
     def collisionDetection():
         cx = 0
@@ -114,6 +123,8 @@ def neverEndingFunctions():
             time.sleep(0.01)
             
     collisionDetection()
+
+distance()
 
 neverEndingFunctions()
     
