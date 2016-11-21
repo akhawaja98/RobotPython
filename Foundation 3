@@ -97,15 +97,15 @@ x_max = 1260
 y_max = 715
 
 def collisionEnemyWall():
-    vx = 0
-    vy = 0
-    Ball = w.create_oval(10,10,60,60, fill="#FF0000")
+    cx = 0
+    cy = 0
+    ball = w.create_oval(10,10,60,60, fill="#FF0000")
     XSpeed = 1
     YSpeed = 2
     
     while True:
-        w.move(Ball, XSpeed, YSpeed)
-        Pos = w.coords(Ball)
+        w.move(ball, XSpeed, YSpeed)
+        Pos = w.coords(ball)
         if Pos[3] >=720 or Pos[1] <=0:
             YSpeed = -YSpeed
         if Pos[2] >=1280 or Pos[0] <=0:
@@ -113,16 +113,16 @@ def collisionEnemyWall():
         
         rx1, ry1, rx2, ry2 = w.coords(Robot)
         if rx1 >= x_max:
-            vx = -10
+            cx = -10
         if ry1 <= y_min:
-            vy = 10
+            cy = 10
         if ry2 >= y_max:
-            vy= -10
+            cy= -10
         if rx1 <= x_min:
-            vx = 10
-        w.coords(Robot, rx1+vx, ry1+vy, rx2+vx, ry2+vy)
-        vx = 0
-        vy = 0
+            cx = 10
+        w.coords(Robot, rx1+cx, ry1+cy, rx2+cx, ry2+cy)
+        cx = 0
+        cy = 0
         
         w.update()
         time.sleep(0.01)
