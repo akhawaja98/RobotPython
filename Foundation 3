@@ -128,3 +128,7 @@ def neverEndingFunctions():
     collisionDetection()
 
 distance()
+
+neverEndingFunctions()
+    
+root.mainloop()
