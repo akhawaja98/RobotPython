@@ -1,0 +1,21 @@
+# Section extracted from final program for commenting and explaining purposes. All code beneath is my own.
+# This code can be seen in full in foundation 3 and in my collission code file.
+
+            if rx1 >= x_max:
+                winsound.PlaySound('SystemExclamation',winsound.SND_ALIAS) # Added system sound to play when user collides with arena edge.
+                cx = -10
+            if ry1 <= y_min:
+                winsound.PlaySound('SystemExclamation',winsound.SND_ALIAS) # Added system sound to play when user collides with arena edge.
+                cy = 10
+            if ry2 >= y_max:
+                winsound.PlaySound('SystemExclamation',winsound.SND_ALIAS) # Added system sound to play when user collides with arena edge.
+                cy= -10
+            if rx1 <= x_min:
+                winsound.PlaySound('SystemExclamation',winsound.SND_ALIAS) # Added system sound to play when user collides with arena edge.
+                cx = 10
+            w.coords(Robot, rx1+cx, ry1+cy, rx2+cx, ry2+cy)
+            cx = 0
+            cy = 0
+        
+            w.update()
+            time.sleep(0.01)
