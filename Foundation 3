@@ -1,5 +1,6 @@
 import math
 import time
+import winsound
 from tkinter import *
 
 def MainBackground():
@@ -68,8 +69,6 @@ def upKey(event):
 def downKey(event):
      x1,y1,x2,y2= w.coords(Robot)
      w.coords(Robot,x1,y1+5,x2,y2+5)
-     w.bind('<Left>', leftKey)
-
 
 w.bind('<Left>', leftKey)
 w.bind('<Right>', rightKey)
@@ -105,15 +104,19 @@ def neverEndingFunctions():
                 YSpeed = -YSpeed
             if Pos[2] >=1280 or Pos[0] <=0:
                 XSpeed = -XSpeed
-        
+                
             rx1, ry1, rx2, ry2 = w.coords(Robot)
             if rx1 >= x_max:
+                winsound.PlaySound('SystemExclamation',winsound.SND_ALIAS)
                 cx = -10
             if ry1 <= y_min:
+                winsound.PlaySound('SystemExclamation',winsound.SND_ALIAS)
                 cy = 10
             if ry2 >= y_max:
+                winsound.PlaySound('SystemExclamation',winsound.SND_ALIAS)
                 cy= -10
             if rx1 <= x_min:
+                winsound.PlaySound('SystemExclamation',winsound.SND_ALIAS)
                 cx = 10
             w.coords(Robot, rx1+cx, ry1+cy, rx2+cx, ry2+cy)
             cx = 0
@@ -125,7 +128,3 @@ def neverEndingFunctions():
     collisionDetection()
 
 distance()
-
-neverEndingFunctions()
-    
-root.mainloop()
