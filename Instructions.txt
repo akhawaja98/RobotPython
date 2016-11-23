@@ -1,0 +1,5 @@
+Instructions
+1)Using the directional arrows on the keyboard. You will be able to controll theblack box.
+2)You must go around the map towards the landmarks, to collect coins.
+3)If the red emeny circle touhes you. You will loose a life
+4)When all the coins are collected. Go towards the red door. That is where the game ends.
