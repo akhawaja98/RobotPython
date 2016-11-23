@@ -6,12 +6,7 @@ def neverEndingFunctions():
         XSpeed = 1
         YSpeed = 2
 
-        landm1 = w.coords(Landmark)
-        landm2 = w.coords(Landmark2)
-        landm3 = w.coords(Landmark3)
-        landm4 = w.coords(Landmark4)
-        landm5 = w.coords(Landmark5)
-        landm6 = w.coords(Landmark6)
+
     
         while True:
             w.move(ball, XSpeed, YSpeed)
@@ -22,40 +17,65 @@ def neverEndingFunctions():
                 XSpeed = -XSpeed
 
             w.move(ball, XSpeed, YSpeed)
-            landm1 = w.coords(Landmark)
-            if landm1 == Pos[3] or landm1 == Pos[1]: 
+            if 700 >= Pos[3] or 740 <= Pos[1]: #bounces off landmark 1
                 XSpeed = -XSpeed
-            if landm1 == Pos[2] or landm1 == Pos[0]:
+            if 360 >= Pos[2] or 400 <= Pos[0]:
                 YSpeed = -YSpeed
                 
             w.move(ball, XSpeed, YSpeed)
-            landm2 = w.coords(Landmark2)
-            if landm2 == Pos[3] or landm2 == Pos[1]: 
+            if 570 >= Pos[3] or 610 <= Pos[1]: #bounces off landmark 2
                 XSpeed = -XSpeed
-            if landm2 == Pos[2] or landm2 == Pos[0]:
+            if 80 >= Pos[2] or 40 <= Pos[0]:
                 YSpeed = -YSpeed
 
             w.move(ball, XSpeed, YSpeed)
-            landm3 = w.coords(Landmark3)
-            if landm3 == Pos[3] or landm3 == Pos[1]: 
+            if 420 >= Pos[3] or 460 <= Pos[1]: #bounces off landmark 3
                 XSpeed = -XSpeed
-            if landm3 == Pos[2] or landm3 == Pos[0]:
+            if 200 >= Pos[2] or 160 <= Pos[0]:
                 YSpeed = -YSpeed
 
-            landm4 = w.coords(Landmark4)
-            if landm4 == Pos[3] or landm4 == Pos[1]: 
+            w.move(ball, XSpeed, YSpeed)
+            if 340 >= Pos[3] or 380 <= Pos[1]: #bounces off landmark 4
                 XSpeed = -XSpeed
-            if landm4 == Pos[2] or landm4 == Pos[0]:
+            if 580 >= Pos[2] or 540 <= Pos[0]:
                 YSpeed = -YSpeed
 
-            landm5 = w.coords(Landmark5)
-            if landm5 == Pos[3] or landm5 == Pos[1]: 
+            w.move(ball, XSpeed, YSpeed)
+            if 960 >= Pos[3] or 1000 <= Pos[1]: #bounces off landmark 5
                 XSpeed = -XSpeed
-            if landm5 == Pos[2] or landm5 == Pos[0]:
+            if 440 >= Pos[2] or 400 <= Pos[0]:
                 YSpeed = -YSpeed
 
-            landm6 = w.coords(Landmark6)
-            if landm6 == Pos[3] or landm6 == Pos[1]: 
+            w.move(ball, XSpeed, YSpeed)
+            if 1160 >= Pos[3] or 1200 <= Pos[1]: #bounces off landmark 6
                 XSpeed = -XSpeed
-            if landm6 == Pos[2] or landm6 == Pos[0]:
+            if 340 >= Pos[2] or 300 <= Pos[0]:
                 YSpeed = -YSpeed
+                
+            rx1, ry1, rx2, ry2 = w.coords(Robot)
+            if rx1 >= x_max:
+                winsound.PlaySound('SystemExclamation',winsound.SND_ALIAS)
+                cx = -10
+            if ry1 <= y_min:
+                winsound.PlaySound('SystemExclamation',winsound.SND_ALIAS)
+                cy = 10
+            if ry2 >= y_max:
+                winsound.PlaySound('SystemExclamation',winsound.SND_ALIAS)
+                cy= -10
+            if rx1 <= x_min:
+                winsound.PlaySound('SystemExclamation',winsound.SND_ALIAS)
+                cx = 10
+            w.coords(Robot, rx1+cx, ry1+cy, rx2+cx, ry2+cy)
+            cx = 0
+            cy = 0
+        
+            w.update()
+            time.sleep(0.01)
+            
+    collisionDetection()
+
+distance()
+
+neverEndingFunctions()
+    
+root.mainloop()
