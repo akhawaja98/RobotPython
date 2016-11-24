@@ -1,0 +1,13 @@
+            #coordinates of the robot 
+            PosR = w.bbox(Robot)
+            
+            #coordinates of the road
+            croad1 = w.bbox(Road1)
+            croad2 = w.bbox(Road2)
+            croad3 = w.bbox(Road3)
+            croad4 = w.bbox(Road4)
+            croad5 = w.bbox(Road5)
+            print(Road1)
+
+            if PosR == croad1:
+                print("in the road.")
