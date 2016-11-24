@@ -1,0 +1,11 @@
+while True:
+            w.move(ball, XSpeed, YSpeed)
+            Pos = w.coords(ball)
+            if Pos[3] >=720 or Pos[1] <=0:
+                YSpeed = -YSpeed
+            if Pos[2] >=1280 or Pos[0] <=0:
+                XSpeed = -XSpeed
+            
+            PosR = w.bbox(Robot)
+            #This code prints out the distance between the robot and the enemy
+            print(int(math.sqrt((int(PosR[2]) - int(Pos[2]))**2 + (int(PosR[3]) - int(Pos[3]))**2)))
