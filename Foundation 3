@@ -32,13 +32,22 @@ def Landmark6(x, y):
 def Platform(x, y):
     w.create_rectangle(x, y, 1400, 680, width =0, fill="#55290D")
 
+
 root = Tk()
 root.geometry("1280x720")
 
 w = Canvas(root, width=1280, height=720)
 w.pack()
-
 MainBackground()
+
+
+#750 = top right = x1
+#175 = top left = y1
+#200 = bottom right = y2
+#725 = bottom left = x2
+powerUp = w.create_rectangle(750, 175, 725, 200, fill="SeaGreen1")
+
+
 Road1(630, 0)
 Road2(20, -1200)
 Road3(10, -10)
@@ -58,17 +67,20 @@ def leftKey(event):
     x1,y1,x2,y2 = w.coords(Robot)
     w.coords(Robot,x1-10,y1,x2-10,y2)
 
+
 def rightKey(event):
     x1,y1,x2,y2= w.coords(Robot)
     w.coords(Robot,x1+10,y1,x2+10,y2)
 
+
 def upKey(event):
      x1,y1,x2,y2= w.coords(Robot)
-     w.coords(Robot,x1,y1-5,x2,y2-5)
+     w.coords(Robot,x1,y1-10,x2,y2-10)
+
 
 def downKey(event):
      x1,y1,x2,y2= w.coords(Robot)
-     w.coords(Robot,x1,y1+5,x2,y2+5)
+     w.coords(Robot,x1,y1+10,x2,y2+10)
 
 w.bind('<Left>', leftKey)
 w.bind('<Right>', rightKey)
@@ -80,6 +92,7 @@ x_min = 3
 y_min = 3
 x_max = 1260
 y_max = 715
+
 
 def distance():
     start = w.create_rectangle(1260, 675, 1279, 719, fill="green")
@@ -104,6 +117,32 @@ def neverEndingFunctions():
                 YSpeed = -YSpeed
             if Pos[2] >=1280 or Pos[0] <=0:
                 XSpeed = -XSpeed
+
+
+            #Triggering the Power Up square for speed
+            PosR = w.bbox(Robot) 
+            if  750 >= PosR[0] <= 800 and 150 <= PosR[0] >= 725 and 175 <= PosR[3] >=150 and 750 >= PosR[1] <=175:
+                def leftKey(event):
+                    x1,y1,x2,y2 = w.coords(Robot)
+                    w.coords(Robot,x1-20,y1,x2-20,y2)
+
+                def rightKey(event):
+                    x1,y1,x2,y2= w.coords(Robot)
+                    w.coords(Robot,x1+20,y1,x2+20,y2)
+
+                def upKey(event):
+                    x1,y1,x2,y2= w.coords(Robot)
+                    w.coords(Robot,x1,y1-20,x2,y2-20)
+
+                def downKey(event):
+                    x1,y1,x2,y2= w.coords(Robot)
+                    w.coords(Robot,x1,y1+20,x2,y2+20)
+                w.bind('<Left>', leftKey)
+                w.bind('<Right>', rightKey)
+                w.bind('<Up>', upKey)
+                w.bind('<Down>', downKey)
+                w.focus_set()
+               
                 
             rx1, ry1, rx2, ry2 = w.coords(Robot)
             if rx1 >= x_max:
