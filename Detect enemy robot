@@ -1,0 +1,6 @@
+PosR = w.bbox(Robot)
+#This works out distance between 
+DistanceBetween = int(math.sqrt((int(PosR[2]) - int(Pos[2]))**2 + (int(PosR[3]) - int(Pos[3]))**2))
+            
+if DistanceBetween <= 20: #if the value of the distance between the ball and robot is 20 or less, it should lose a life
+  print("enemy hit")
