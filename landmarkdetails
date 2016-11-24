@@ -1,0 +1,178 @@
+ while True:
+
+        p = list(w.bbox(Robot))
+   
+        if (p[0]) >= 1150 and (p[0]) <= 1170:
+            PromptLandMark6(w.bbox(Robot))
+
+
+
+def PromptLandMark1(position):
+
+    
+    #landmark1
+    xcoordinaterange0 = random.randint(697,703)
+    ycoordinaterange0 = random.randint(397,403)
+    xcoordinaterange1 = random.randint(737,743)
+    ycoordinaterange1 = random.randint(357,363)
+
+    
+    position = (w.coords(Robot))
+    if ((position[0]) - (xcoordinaterange0) <= 6):
+        LosAngeles = Label(root, text= "Welcome to Los Angeles")
+        LosAngeles.place(x=700, y=400)
+
+    elif ((position[1]) - (ycoordinaterange0)) <= 6:
+        LosAngeles = Label(root, text= "Welcome to Los Angeles")
+        LosAngeles.place(x=700, y=400)
+
+    elif ((position[2]) - (xcoordinaterange1)) <= 6:
+        LosAngeles = Label(root, text= "Welcome to Los Angeles")
+        LosAngeles.place(x=700, y=400)
+
+    elif ((position[3]) - (ycoordinaterange1)) <= 6:
+        LosAngeles = Label(root, text= "Welcome to Los Angeles")
+        LosAngeles.place(x=700, y=400)
+
+def PromptLandMark2(position):
+
+    
+    #landmark2
+    xcoordinaterange0 = random.randint(567,573)
+    ycoordinaterange0 = random.randint(77,83)
+    xcoordinaterange1 = random.randint(607,613)
+    ycoordinaterange1 = random.randint(37,43)
+
+    
+    position = (w.coords(Robot))
+    if ((position[0]) - (xcoordinaterange0) <= 6):
+        LosAngeles = Label(root, text= "Welcome to Las Vegas")
+        LosAngeles.place(x=570, y=80)
+
+    elif ((position[1]) - (ycoordinaterange0)) <= 6:
+        LosAngeles = Label(root, text= "Welcome to Las Vegas")
+        LosAngeles.place(x=570, y=80)
+
+    elif ((position[2]) - (xcoordinaterange1)) <= 6:
+        LosAngeles = Label(root, text= "Welcome to Las Vegas")
+        LosAngeles.place(x=570, y=80)
+
+    elif ((position[3]) - (ycoordinaterange1)) <= 6:
+        LosAngeles = Label(root, text= "Welcome to Las Vegas")
+        LosAngeles.place(x=570, y=80)
+
+def PromptLandMark3(position):
+    #420, 200, 460, 160
+    #landmark3
+    xcoordinaterange0 = random.randint(417,423)
+    ycoordinaterange0 = random.randint(197,203)
+    xcoordinaterange1 = random.randint(457,463)
+    ycoordinaterange1 = random.randint(157,163)
+
+    
+    position = (w.coords(Robot))
+    if ((position[0]) - (xcoordinaterange0) <= 6):
+        LosAngeles = Label(root, text= "Welcome to New York")
+        LosAngeles.place(x=420, y=200)
+
+    elif ((position[1]) - (ycoordinaterange0)) <= 6:
+        LosAngeles = Label(root, text= "Welcome to New York")
+        LosAngeles.place(x=420, y=200)
+
+    elif ((position[2]) - (xcoordinaterange1)) <= 6:
+        LosAngeles = Label(root, text= "Welcome to New York")
+        LosAngeles.place(x=420, y=200)
+
+    elif ((position[3]) - (ycoordinaterange1)) <= 6:
+        LosAngeles = Label(root, text= "Welcome to New York")
+        LosAngeles.place(x=420, y=200)
+
+
+def PromptLandMark4(position):
+    
+    #landmark4
+    xcoordinaterange0 = random.randint(337,343)
+    ycoordinaterange0 = random.randint(577,583)
+    xcoordinaterange1 = random.randint(377,383)
+    ycoordinaterange1 = random.randint(537,543)
+
+    
+    position = (w.coords(Robot))
+    if ((position[0]) - (xcoordinaterange0) <= 6):
+        LosAngeles = Label(root, text= "Welcome to Miami")
+        LosAngeles.place(x=340, y=580)
+
+    elif ((position[1]) - (ycoordinaterange0)) <= 6:
+        LosAngeles = Label(root, text= "Welcome to Miami")
+        LosAngeles.place(x=340, y=580)
+
+    elif ((position[2]) - (xcoordinaterange1)) <= 6:
+        LosAngeles = Label(root, text= "Welcome to Miami")
+        LosAngeles.place(x=340, y=580)
+
+    elif ((position[3]) - (ycoordinaterange1)) <= 6:
+        LosAngeles = Label(root, text= "Welcome to Miami")
+        LosAngeles.place(x=340, y=580)
+
+def PromptLandMark5(position):
+
+    #landmark5
+    xcoordinaterange0 = random.randint(957,963)
+    ycoordinaterange0 = random.randint(437,443)
+    xcoordinaterange1 = random.randint(997,1003)
+    ycoordinaterange1 = random.randint(397,403)
+
+    
+    position = (w.coords(Robot))
+    if ((position[0]) - (xcoordinaterange0) <= 6):
+        LosAngeles = Label(root, text= "Welcome to The White House")
+        LosAngeles.place(x=960, y=440)
+
+    elif ((position[1]) - (ycoordinaterange0)) <= 6:
+        LosAngeles = Label(root, text= "Welcome to The White House")
+        LosAngeles.place(x=960, y=440)
+
+    elif ((position[2]) - (xcoordinaterange1)) <= 6:
+        LosAngeles = Label(root, text= "Welcome to The White House")
+        LosAngeles.place(x=960, y=440)
+
+    elif ((position[3]) - (ycoordinaterange1)) <= 6:
+        LosAngeles = Label(root, text= "Welcome to The White House")
+        LosAngeles.place(x=960, y=440)
+
+
+
+
+
+
+def PromptLandMark6(position):
+
+    #landmark6
+    xcoordinaterange0 = random.randint(1157,1163)
+    ycoordinaterange0 = random.randint(337,343)
+    xcoordinaterange1 = random.randint(1197,1203)
+    ycoordinaterange1 = random.randint(297,303)
+
+    print(position)
+    
+    #position = (w.coords(Robot))
+    if ((position[0]) - (xcoordinaterange0) <= 6):
+        LosAngeles = Label(root, text= "Welcome to The Empire State Building")
+        LosAngeles.place(x=1000, y=340)
+        root.after(1500, LosAngeles.destroy)
+
+    elif ((position[1]) - (ycoordinaterange0)) <= 6:
+        LosAngeles = Label(root, text= "Welcome to The Empire State Building")
+        LosAngeles.place(x=1000, y=340)
+        root.after(1500, LosAngeles.destroy)
+
+    elif ((position[2]) - (xcoordinaterange1)) <= 6:
+        LosAngeles = Label(root, text= "Welcome to The Empire State Building")
+        LosAngeles.place(x=1000, y=340)
+        root.after(1500, LosAngeles.destroy)
+
+    elif ((position[3]) - (ycoordinaterange1)) <= 6:
+        LosAngeles = Label(root, text= "Welcome to The Empire State Building")
+        LosAngeles.place(x=1000, y=340)
+        root.after(1500, LosAngeles.destroy)
+
