@@ -5,19 +5,16 @@ from tkinter import *
 import random
 
 def Collected(event=None):
-    global CoinCounter
+    global CoinCounter  #Function to allow coin counter to increment
     CoinCounter += 1
     
 
 def QuitScreen():
-    QuitScreen = Tk()
+    QuitScreen = Tk()   #Function to create the end scren
 
     EndText = Label(QuitScreen, text="Game Over", font="times")
     EndText.pack(side="top")
-
-   
-
-
+    
     CoinText = Label(QuitScreen, text="Coins Collected = " + str(CoinCounter), font="times")
     CoinText.pack(side="top")
           
@@ -60,7 +57,7 @@ root = Tk()
 root.geometry("1280x720")
 global startlives
 global CoinCounter
-CoinCounter = 0
+CoinCounter = 0 #coin counter will need to start at 0
 startlives = 10 #sets number of starting lives -1
 
 def PrintLives():    
