@@ -121,6 +121,23 @@ def neverEndingFunctions():
             PosR = w.bbox(Robot)
             #This code measures the distance between the robot and the enemy
             enemydist = int(math.sqrt((int(PosR[2]) - int(Pos[2]))**2 + (int(PosR[3]) - int(Pos[3]))**2))
+
+            #This code measures the distance between the robot and Landmarks
+            landmar1kdist = int(math.sqrt( (int(PosR[2]) - 370)**2 + (int(PosR[3]) - 580)**2))
+            landmar2kdist = int(math.sqrt( (int(PosR[2]) - 450)**2 + (int(PosR[3]) - 195)**2))
+            landmar3kdist = int(math.sqrt( (int(PosR[2]) - 610)**2 + (int(PosR[3]) - 80)**2))
+            landmar4kdist = int(math.sqrt( (int(PosR[2]) - 740)**2 + (int(PosR[3]) - 400)**2))
+            landmar5kdist = int(math.sqrt( (int(PosR[2]) - 1000)**2 + (int(PosR[3]) - 440)**2))
+            landmar6kdist = int(math.sqrt( (int(PosR[2]) - 1200)**2 + (int(PosR[3]) - 340)**2))
+            #This code finds nearest landmark
+            LandmarkList = (landmar1kdist, landmar2kdist, landmar3kdist, landmar4kdist, landmar5kdist, landmar6kdist)
+            NearestLandmark = min(LandmarkList)
+            print(NearestLandmark)
+            nearestLandm = Label(root, text = "Nearest landmark is " + str(NearestLandmark) + " away")
+            nearestLandm.place(x=10,y=10)
+
+
+            
             
             #ball bounces off landmarks
             if  Pos[3] >=540 and Pos[1] <=580 and Pos[2] >= 320 and Pos[0] <= 370:
@@ -158,6 +175,8 @@ def neverEndingFunctions():
                 w.bind('<Up>', upKey)
                 w.bind('<Down>', downKey)
                 w.focus_set()
+                collectedBoost = Label(root, text = "Speed boost activated!")
+                collectedBoost.place(x=10,y=30)
                
                 
             rx1, ry1, rx2, ry2 = w.coords(Robot)
@@ -181,6 +200,7 @@ def neverEndingFunctions():
             time.sleep(0.01)
             
     collisionDetection()
+
 
 distance()
 
