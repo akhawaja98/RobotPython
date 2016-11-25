@@ -118,7 +118,10 @@ def neverEndingFunctions():
             if Pos[2] >=1280 or Pos[0] <=0:
                 XSpeed = -XSpeed
 
-
+            PosR = w.bbox(Robot)
+            #This code measures the distance between the robot and the enemy
+            enemydist = int(math.sqrt((int(PosR[2]) - int(Pos[2]))**2 + (int(PosR[3]) - int(Pos[3]))**2))
+            
             #ball bounces off landmarks
             if  Pos[3] >=540 and Pos[1] <=580 and Pos[2] >= 320 and Pos[0] <= 370:
                 YSpeed = -YSpeed
@@ -133,10 +136,7 @@ def neverEndingFunctions():
             if  Pos[3] >=300 and Pos[1] <=340 and Pos[2] >= 1160 and Pos[0] <= 1200:
                 XSpeed = -XSpeed
 
-
-
             #Triggering the Power Up square for speed
-            PosR = w.bbox(Robot) 
             if  750 >= PosR[0] <= 800 and 150 <= PosR[0] >= 725 and 175 <= PosR[3] >=150 and 750 >= PosR[1] <=175:
                 def leftKey(event):
                     x1,y1,x2,y2 = w.coords(Robot)
