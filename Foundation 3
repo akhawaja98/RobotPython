@@ -119,6 +119,22 @@ def neverEndingFunctions():
                 XSpeed = -XSpeed
 
 
+            #ball bounces off landmarks
+            if  Pos[3] >=540 and Pos[1] <=580 and Pos[2] >= 320 and Pos[0] <= 370:
+                YSpeed = -YSpeed
+            if  Pos[3] >=160 and Pos[1] <=195 and Pos[2] >= 400 and Pos[0] <= 450:
+                XSpeed = -XSpeed
+            if  Pos[3] >=40 and Pos[1] <=80 and Pos[2] >= 540 and Pos[0] <= 610:
+                YSpeed = -YSpeed
+            if  Pos[3] >=360 and Pos[1] <=400 and Pos[2] >= 670 and Pos[0] <= 740:
+                XSpeed = -XSpeed
+            if  Pos[3] >=400 and Pos[1] <=440 and Pos[2] >= 960 and Pos[0] <= 1000:
+                YSpeed = -YSpeed
+            if  Pos[3] >=300 and Pos[1] <=340 and Pos[2] >= 1160 and Pos[0] <= 1200:
+                XSpeed = -XSpeed
+
+
+
             #Triggering the Power Up square for speed
             PosR = w.bbox(Robot) 
             if  750 >= PosR[0] <= 800 and 150 <= PosR[0] >= 725 and 175 <= PosR[3] >=150 and 750 >= PosR[1] <=175:
