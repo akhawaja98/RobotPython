@@ -132,12 +132,9 @@ def neverEndingFunctions():
             #This code finds nearest landmark
             LandmarkList = (landmar1kdist, landmar2kdist, landmar3kdist, landmar4kdist, landmar5kdist, landmar6kdist)
             NearestLandmark = min(LandmarkList)
-            print(NearestLandmark)
             nearestLandm = Label(root, text = "Nearest landmark is " + str(NearestLandmark) + " away")
             nearestLandm.place(x=10,y=10)
-
-
-            
+        
             
             #ball bounces off landmarks
             if  Pos[3] >=540 and Pos[1] <=580 and Pos[2] >= 320 and Pos[0] <= 370:
@@ -200,7 +197,6 @@ def neverEndingFunctions():
             time.sleep(0.01)
             
     collisionDetection()
-
 
 distance()
 
